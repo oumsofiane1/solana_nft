@@ -1,0 +1,6 @@
+[submodule "metaboss"]
+	path = metaboss
+	url = git@github.com:samuelvanderwaal/metaboss.git
+[submodule "sol-mint-list"]
+	path = sol-mint-list
+	url = git@github.com:statikdev/sol-mint-list.git
