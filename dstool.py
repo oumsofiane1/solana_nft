@@ -4,7 +4,7 @@ import json
 @click.command()
 @click.argument('filename', type=click.Path(exists=True))
 @click.option('--tag', help='tag of the form; tagName=value')
-@click.option('--data', default='mintWalletAddress', help='example --data=mintWalletAddress')
+@click.option('--data', default='=', help='example --data=mintWalletAddress')
 
 def parse(filename, tag, data):
     """Simple program that greets NAME for a total of COUNT times."""
@@ -18,7 +18,11 @@ def parse(filename, tag, data):
     for item in json_data:
         for att in item['nftData']['attributes']:
             if att['trait_type'] == filter[0] and att['value'] == filter[1]:
-                print(item[data])
+                s = data.split(".")
+                if len(s) == 2:
+                    print(item[s[0]][s[1]])
+                else:
+                    print(item[data])
 
 
 if __name__ == '__main__':
