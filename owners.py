@@ -19,7 +19,7 @@ def parse(filename, mints, data):
         mint = l.strip()
         for item in json_data:
             if item['mint_account'] == mint:
-                print(mint, ",", item[data], "\n")
+                print(mint + "," + item[data])
 
 if __name__ == '__main__':
     parse()
