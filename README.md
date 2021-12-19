@@ -12,5 +12,6 @@ python owners.py <pathToFile> <path to mint file previous generated> --data=owne
 exact steps for the current data:
 ```
 python dstool.py data/mint-data.json --tag="Stamp=NICE-YES" --data=tokenMetadata.mint >> mints.txt
+python dstool.py data/mint-data.json --tag="StampAllYes=NICE-YES" --data=tokenMetadata.mint >> mints.txt
 python owners.py data/metaboss-all.json mints.txt  --data=owner_wallet >> holders.csv
 ```

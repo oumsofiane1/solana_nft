@@ -8,8 +8,6 @@ import json
 
 def parse(filename, tag, data):
     """Simple program that greets NAME for a total of COUNT times."""
-    print(f"parsing: ", filename)
-
     filter = tag.split("=")
 
     f = open(filename,)

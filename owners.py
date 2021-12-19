@@ -8,7 +8,6 @@ import json
 
 def parse(filename, mints, data):
     """Simple program that greets NAME for a total of COUNT times."""
-    print(f"parsing: ", mints)
     f = open(mints)
 
     f2 = open(filename,)
